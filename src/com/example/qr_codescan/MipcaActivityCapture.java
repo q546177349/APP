@@ -1,5 +1,5 @@
 package com.example.qr_codescan;
-
+//sss
 import java.io.IOException;
 import java.util.Vector;
 
