@@ -1,5 +1,5 @@
 package com.example.qr_codescan;
-
+//APPTEST
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -13,13 +13,8 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
 	private final static int SCANNIN_GREQUEST_CODE = 1;
-	/**
-	 * ��ʾɨ����
-	 */
+	
 	private TextView mTextView;
-	/**
-	 * ��ʾɨ���ĵ�ͼƬ
-	 */
 	private ImageView mImageView;
 
 	@Override
@@ -30,8 +25,6 @@ public class MainActivity extends Activity {
 		mTextView = (TextView) findViewById(R.id.result);
 		mImageView = (ImageView) findViewById(R.id.qrcode_bitmap);
 
-		// �����ť��ת����ά��ɨ����棬�����õ���startActivityForResult��ת
-		// ɨ������֮������ý���
 		Button mButton = (Button) findViewById(R.id.button1);
 		mButton.setOnClickListener(new OnClickListener() {
 
@@ -54,9 +47,6 @@ public class MainActivity extends Activity {
 			if (resultCode == RESULT_OK) {
 				Bundle bundle = data.getExtras();
 				mTextView.setText(bundle.getString("result"));
-				// ��ʾ
-				// mImageView.setImageBitmap((Bitmap) data
-				// .getParcelableExtra("bitmap"));
 			}
 			break;
 		}
